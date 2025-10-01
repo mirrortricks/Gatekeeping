@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handbook Analysis Data Visualization</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link:hover {
+            color: #4f46e5;
+        }
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+        .research-section {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white py-4 px-6 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">Handbook Analysis Data</a>
+            <div class="hidden md:flex space-x-8">
+                            </div>
+            <button class="md:hidden text-slate-700">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-50 to-blue-50 py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-slate-800" data-aos="fade-up">Gatekeeping in Handbook Policy: Development and Application of a Research-Based, Novel Matrix of Evaluation</h1>
+            <p class="text-xl mb-8 text-slate-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Interactive visualizations of content document analysis across 44 handbooks
+            </p>
+        </div>
+    </section>
+
+    <!-- Research Study Section -->
+    <section class="py-16 px-6 research-section">
+        <div class="container mx-auto">
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-6 text-center text-slate-800"></h2>
+                
+                <div class="mb-8 p-4 bg-indigo-50 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-700">Authors</h3>
+                    <p class="text-lg">Aaron Reslink, LCPC, LMHC; Kristina DePue, PhD, NCC; Stephanie Stiavetti, APCC, AMFT</p>
+                </div>
+
+                <!-- Summary -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800 border-b pb-2">Summary</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-slate-700">
+                        <li>Gatekeeping and remediation policies differ across U.S. programs and the field does not have a united language or stance on gatekeeping and remediation (consider: "personal fitness" "mental fitness" "personal capacity" for describing student mental health).</li>
+                        <li>Almost all programs have a remediation strategy, but the details of these policies vary widely.</li>
+                        <li>They vary in detail, types of assistance provided, and description of formality levels.</li>
+                        <li>Only 50% of student handbooks defined dispositional issues that could lead to a gatekeeping concern.</li>
+                        <li>A robust description of specific remediation interventions was found in 9 of 44 handbooks.</li>
+                    </ul>
+                </div>
+
+                <!-- Abstract -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800 border-b pb-2">Abstract</h3>
+                    <p class="text-slate-700">This case study investigated current trends of gatekeeping in counseling program handbooks using content analysis. Remediation planning was the most present code, found in 39 of 44 handbooks. Authors call to increase culturally- and disability-informed remediation practices. Additionally, policies of gatekeeping were inconsistent in the sample, following different recommendations.</p>
+                </div>
+
+                <!-- Introduction -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800 border-b pb-2">Introduction</h3>
+                    <p class="text-slate-700 mb-4">Counselor educators determine which counseling students are appropriate to continue into the field by serving as gatekeepers to the profession. The action of gatekeeping is a key factor of counselor educator identity, and is also associated with stress on counselor educators (Decine & Waalkes, 2022; Brown-Rice & Furr, 2016). Because gatekeeping issues are also relevant with problems of professional competency or dispositional problems, counselor educators can face difficult decisions when approaching gatekeeping.</p>
+                    <p class="text-slate-700 mb-4">Additionally, legal issues can be a source of stress during remediation and gatekeeping, as counselor educators have multiple perspectives on the role of gatekeeping and dismissal when legal challenges occur (Burkholder et al., 2014). Finally, Urwin et al. (2006) shows the benefit of informing students about program expectations, and research has suggested benefits to informing and involving students in gatekeeping (Foster et al., 2014).</p>
+                    <p class="text-slate-700">When considering counselor educator stress, legal challenges, and the students' roles, counselor educators can benefit from having concretized, formal policies (Gaubatz & Vera, 2002), such as those found in the student program handbook. Because these formal policies have been described in the literature (Gilfoye, 2008; Homrich et al., 2018), and because student program handbooks often include statements about remediation and dismissal procedures, these researchers engaged in a content analysis to determine the present state of gatekeeping and remediation in mental health counseling programs as found in program handbooks.</p>
+                </div>
+
+                <!-- Study Purpose -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800 border-b pb-2">Study Purpose</h3>
+                    <p class="text-slate-700">To determine the present state of gatekeeping and remediation policy and practice as present in current mental health counseling program handbooks. Additionally, these researchers sought to compare program handbooks using content analysis. Finally, an evaluation matrix was developed as the result of researcher conversations about the commonly observed factors of gatekeeping.</p>
+                </div>
+
+                <!-- Research Questions -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800 border-b pb-2">Research Questions</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-slate-700">
+                        <li>What policies are common in current (2016 - present) counseling student handbooks across a U.S. sample?</li>
+                        <li>How different are policies between sample categories (e.g., private versus public school handbooks?)</li>
+                        <li>How frequently do handbooks follow literature-based recommendations?</li>
+                    </ul>
+                </div>
+
+                <!-- Methodology -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800 border-b pb-2">Methodology</h3>
+                    <p class="text-slate-700">This study uses a case study design with a content document analysis method (Creswell & Poth, 2024, Krippendorff, 2004). The case study was defined as gatekeeping and remediation issues within a current (2016-present) mental health counseling program handbook. In addition, focus was drawn to handbook information pertaining to within-program policy. This boundary allowed for investigation of gatekeeping as a unique practice within counselor education.</p>
+                </div>
+
+                <!-- Results -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800 border-b pb-2">Results</h3>
+                    <p class="text-slate-700 mb-4">Bivariate code frequencies were not significantly different between public and private schools (t(42) = -.067, two-sided p = .947). Schools which outsourced dismissal policies did not have a significantly less dismissal codes overall compared with other handbooks (t(42) = 1.578, one-sided p = .061, Bonferroni corrected α when isolating one of nine axial categories = .055).</p>
+                    <p class="text-slate-700 mb-4">We recommend a gatekeeping evaluation matrix based on common language with the following dialectics:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <ul class="list-disc pl-5 space-y-2 text-slate-700">
+                            <li>Strengths-Based & Collaborative Remediation vs. Prescriptive</li>
+                            <li>Role Clarity vs. Confusion</li>
+                            <li>Standardized vs. Unclear or Absent Evaluation Procedures</li>
+                        </ul>
+                        <ul class="list-disc pl-5 space-y-2 text-slate-700">
+                            <li>Centralized and/or Synthesized Gatekeeping Policy vs. Scattered or Absent Policy</li>
+                            <li>Expansive vs. Limited Definitions of Gatekeeping</li>
+                            <li>Multicultural & Accessibility Dispositional Considerations vs. Dispositions and Abilities Rigidly Defined</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Limitations -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800 border-b pb-2">Limitations</h3>
+                    <p class="text-slate-700 mb-4">This study utilized content analysis; thus, data about faculty composition, recent active gatekeeping practices, and other important data to the topic of interest were not gathered. While intercoder reliability was generally good across all 9 axial areas (87% agreement), two areas were below the recommended percentage agreement, and two were within some concern (appeals policy, 72%; code of ethics, 73%; remediation plans, 77%; supplemental documents, 77%).</p>
+                    <p class="text-slate-700">This limits the replicability of the codebook and calls for stricter codebook and coding confirmation in any follow up research. Finally, student handbooks may not describe the full scope of a program's gatekeeping practices, and some schools may choose to purposefully limit information about their gatekeeping policies or maintain within-program policies not disclosed.</p>
+                </div>
+
+                <!-- Discussion -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800 border-b pb-2">Discussion</h3>
+                    <p class="text-slate-700 mb-4">Counselor educators are recommended to hold clear gatekeeping policies to protect from litigation, increase transparency, and serve as a guide for current faculty (Urwin et al., 2006; Gaubatz & Vera, 2002; Gilfoye, 2008). The field of counselor education may benefit from a push towards universalized language regarding dismissal, remediation, dispositions, professional competency, and evaluation strategies.</p>
+                    <p class="text-slate-700">This study is the first of its kind to analyze a large sample of counseling student handbooks and determine current trends. Future researchers may wish to coordinate these findings with case study designs that capture current policies in action, the content of faculty meetings, or the perceptions of experts on best practice when engaging in dismissal and gatekeeping procedures.</p>
+                </div>
+
+                <!-- References -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800 border-b pb-2">References</h3>
+                    <div class="text-sm text-slate-700 space-y-2 max-h-60 overflow-y-auto p-2 border rounded">
+                        <p>American Counseling Association. (2014). 2014 ACA code of ethics. https://www.counseling.org/docs/default-source/default-document-library/ethics/2014-aca-code-of-ethics.pdf</p>
+                        <p>Americanos, M. (2008). Development of policies and procedures in a higher education institution. Middlesex University.</p>
+                        <p>Baldo, T. D., Softas‐Nall, B. C., & Shaw, S. F. (1997). Student review and retention in counselor education: An alternative to frame and stevens‐smith. Counselor Education and Supervision, 36(3), 245–253. https://doi.org/10.1002/j.1556-6978.1997.tb00392.x</p>
+                        <p>Brown‐Rice, K., & Furr, S. (2015). Gatekeeping ourselves: Counselor educators' knowledge of colleagues' problematic behaviors. Counselor Education and Supervision, 54(3), 176–188. https://doi.org/10.1002/ceas.12012</p>
+                        <p>Brown-Rice, K., & Furr, S. (2016). Counselor educators and students with problems of professional competence: A survey and discussion. The Professional Counselor, 6(2), 134–146. https://doi.org/10.15241/kbr.6.2.134</p>
+                        <p>Burkholder, D., Hall, S. F., & Burkholder, J. (2014). Ward v. Wilbanks: Counselor educators respond. Counselor Education and Supervision, 53(4), 267–283. https://doi.org/10.1002/j.1556-6978.2014.00062.x</p>
+                        <p>Creswell, J. W., & Poth, C. N. (2024). Qualitative inquiry & research design: Choosing among five approaches (Fifth edition). Sage.</p>
+                        <p>Davidson, C. (2015). The university corporatization shift: A longitudinal analysis of university admission handbooks, 1980 to 2010. Canadian Journal of Higher Education, 45(2), 193–213. https://doi.org/10.47678/cjhe.v45i2.184441</p>
+                        <p>Donkor, B., & Harshman, J. (2023). Learning goals and priorities identified by an examination of chemistry graduate handbooks. Journal of Chemical Education, 100(10), Article 10. https://doi.org/10.1021/acs.jchemed.3c00062</p>
+                        <p>Dufrene, R. L. (2018). Informing trainees about gatekeeping policies. In Homrich A. M. & Henderson, K. L. (Eds.), Gatekeeping in the mental health professions (pp. 127-146). American Counseling Association.</p>
+                        <p>Foster, V. A., & McAdams, C. R. (2009). A framework for creating a climate of transparency for professional performance assessment: Fostering student investment in gatekeeping. Counselor Education and Supervision, 48(4), 271–284. https://doi.org/10.1002/j.1556-6978.2009.tb00080.x</p>
+                        <p>Foster, J. M., Leppma, M., & Hutchinson, T. S. (2014). Students' perspectives on gatekeeping in counselor education: A case study. Counselor Education and Supervision, 53(3), 190–203. https://doi.org/10.1002/j.1556-6978.2014.00057.x</p>
+                        <p>Freeman, B. J., Garner, C. M., Fairgrieve, L. A., & Pitts, M. E. (2016). Gatekeeping in the field: Strategies and practices. Journal of Professional Counseling: Practice, Theory & Research, 43(2), 28–41. https://doi.org/10.1080/15566382.2016.12033954</p>
+                        <p>Freeman, B. J., Garner, C. M., Scherer, R., & Trachok, K. (2019). Discovering expert perspectives on dispositions and remediation: A qualitative study. Counselor Education and Supervision, 58(3), 209–224. https://doi.org/10.1002/ceas.12151</p>
+                        <p>Gaubatz, M. D., & Vera, E. M. (2002). Do formalized gatekeeping procedures increase programs' follow‐up with deficient trainees? Counselor Education and Supervision, 41(4), 294–305. https://doi.org/10.1002/j.1556-6978.2002.tb01292.x</p>
+                        <p>Gilfoyle, N. (2008). The legal exosystem: Risk management in addressing student competence problems in professional psychology training. Training and Education in Professional Psychology, 2(4), 202–209. https://doi.org/10.1037/1931-3918.2.4.202</p>
+                        <p>Goodrich, K. M., & Shin, R. Q. (2013). A culturally responsive intervention for addressing problematic behaviors in counseling students. Counselor Education and Supervision, 52(1), 43–55. https://doi.org/10.1002/j.1556-6978.2013.00027.x</p>
+                        <p>Henderson, K. L. (2018). Standards for personal behavior and professional conduct. In Homrich A. M. & Henderson, K. L. (Eds.), Gatekeeping in the mental health professions (pp. 171-192). American Counseling Association.</p>
+                        <p>Hutchens, N., Block, J., & Young, M. (2013). Counselor educators' gatekeeping responsibilities and students' first amendment rights. Counselor Education and Supervision, 52(2), 82–95. https://doi.org/10.1002/j.1556-6978.2013.00030.x</p>
+                        <p>Jones, D. R. (2020). A Comparison of success trajectories among nontraditional students with varying abilities. Journal of Postsecondary Education and Disability, 33(4), 375–385. https://eric.ed.gov/?id=EJ1292930</p>
+                        <p>Kaplan, D. M. (2014). Ethical implications of a critical legal case for the counseling profession: Ward v. Wilbanks. Journal of Counseling & Development, 92(2), 142–146. https://doi.org/10.1002/j.1556-6676.2014.00140.x</p>
+                        <p>Kiesel, L. R., DeZelar, S., & Lightfoot, E. (2018). Challenges, barriers, and opportunities: Social workers with disabilities and experiences in field education. Journal of Social Work Education, 54(4), 696-708. https://doi.org/10.1080/10437797.2018.1507365</p>
+                        <p>Krippendorff, K. (2004). Content analysis: An introduction to its methodology (2nd ed). Sage.</p>
+                        <p>Leland, A. S., Firestone, W. A., Perry, J. A., & McKeon, R. T. (2020). Examining cohort models in the education doctorate. Studies in Graduate and Postdoctoral Education, 11(3), 249–262. https://doi.org/10.1108/SGPE-01-2020-0004</p>
+                        <p>Meeks, L. M. & Jain, N. R. (Eds.). (2015). The guide to assisting students with disabilities: equal access in health science and professional education. Springer Publishing Company.</p>
+                        <p>Nadin, S. & Cassell, C. (2004). Using data matrices. In Cassell, C. & Symon, G. (Eds.), Essential guide to qualitative methods in organizational research (pp. 271-287). SAGE publications.</p>
+                        <p>OpenAI. (2024). ChatGPT (Aug 23 version) [Large language model]. https://chat.openai.com</p>
+                        <p>Parker, L. K., Chang, C. Y., Corthell, K. K., Walsh, M. E., Brack, G., & Grubbs, N. K. (2014). A grounded theory of counseling students who report problematic peers. Counselor Education and Supervision, 53(2), 111–125. https://doi.org/10.1002/j.1556-6978.2014.00052.x</p>
+                        <p>Raszewski, R., Goben, A. H., Bergren, M. D., Jones, K., Ryan, C., Steffen, A., & Vonderheid, S. C. (2021). Exploring data management content in doctoral nursing handbooks. Journal of the Medical Library Association : JMLA, 109(2), 248–257. https://doi.org/10.5195/jmla.2021.1115</p>
+                        <p>Roundtree, S. M. (2024). "I'm not Broken": Disabled students' perceptions of representation in counseling programs. [Doctoral dissertation, The Pennsylvania State University]. https://www.proquest.com/docview/3132850123</p>
+                        <p>Saldaña, J. (2016). The coding manual for qualitative researchers (3. edition). SAGE.</p>
+                        <p>Salpietro, L., Clark, M., Kress, V., Laux, J., & Walker, T. (2021). Remedial interventions to address receptivity to feedback in master's‐level counseling students. Counselor Education and Supervision, 60(4), 274–290. https://doi.org/10.1002/ceas.12216</p>
+                        <p>Schuermann, H., Avent Harris, J. R., & Lloyd‐Hazlett, J. (2018). Academic role and perceptions of gatekeeping in counselor education. Counselor Education and Supervision, 57(1), 51–65. https://doi.org/10.1002/ceas.12093</p>
+                        <p>Sellmaier, C., & Kim, J. (2021). Disability accommodation experiences of social work students in the United States. Social Work Education, 40(7), 872 887. https://doi.org/10.1080/02615479.2020.1738375</p>
+                        <p>Thanasiu, P. L. (2018). Informing trainees about gatekeeping policies. In Homrich A. M. & Henderson, K. L. (Eds.), Gatekeeping in the mental health professions (pp. 147-170). American Counseling Association.</p>
+                        <p>Urwin, C. A., Van Soest, D., & Kretzschmar, J. A. (2006). Key principles for developing gatekeeping standards for working with students with problems. Journal of Teaching in Social Work, 26, 163–180. https://doi.org/10.1300/J067v26n01_10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Visualization Section -->
+    <section class="py-16 px-6">
+        <div class="container mx-auto">
+            <!-- Heatmap -->
+            <div class="mb-20" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-8 text-center text-slate-800">Code Frequency Heatmap</h2>
+                <div class="bg-white rounded-xl shadow-lg p-6 overflow-x-auto">
+                    <div id="heatmap" class="min-w-full" style="height: 600px;"></div>
+                </div>
+            </div>
+
+            <!-- Top Frequency Codes Visualization -->
+            <div class="mb-20" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-8 text-center text-slate-800">Top 10 Most Frequent Codes</h2>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div id="topCodesChart" style="height: 500px;"></div>
+                </div>
+            </div>
+
+            <!-- Handbook Comparison -->
+            <div class="mb-20" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-8 text-center text-slate-800">Handbook Code Comparison</h2>
+                <div class="bg-white rounded-xl shadow-lg p-6 overflow-x-auto">
+                    <div style="width: 2000px; height: 600px;">
+                        <canvas id="comparisonChart" height="600" width="2000"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 py-12 px-6 text-white">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">Reno NV Counseling</a>
+                    <p class="text-slate-300 mt-2">Compassionate care for your mental health journey.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-300 hover:text-white transition">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" class="text-slate-300 hover:text-white transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" class="text-slate-300 hover:text-white transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="text-slate-300 hover:text-white transition">
+                        <i data-feather="twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-300 mb-4 md:mb-0">&copy; 2023 Reno NV Counseling. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-300 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-slate-300 hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        feather.replace();
+
+        // Sample data - replace with actual data from your analysis
+        const codes = [
+            "Academic Rem/Dismissal Policy", "Annual Reviews", 
+            "Appeals Policy", "Appeals Policy Outsourced to College Policy",
+            "Code of Ethics", "Code of ethics in depth", "Collaborative Remediation",
+            "Defining Dispositions", "Defining the GK Committee",
+            "Dismissal", "Dismissal Causes", "Dispositional Evaluation",
+            "Dispositions", "Dispositions Linked to Dismissal", "Dispositions Linked to Remediation",
+            "Documenting Decisions", "Ethical practice as disposition",
+            "Ethical practice linked to dismissal", "Evaluation Agreement Form",
+            "Faculty Gatekeeping Identity", "Formalized Procedures",
+            "Formalized Procedures (Brief)", "Gatekeeping Steps (Benchmarks)",
+            "Gatekeeping Steps (Brief)", "Mental Health/Personal Concerns", 
+            "Performance alert", "Performance Reviews",
+            "Personal Counseling", "Policy Timelines",
+            "Remediation Causes", "Remediation Meeting",
+            "Remediation Plan", "Semesterly Reviews",
+            "Student GK Informed Consent",
+            "Student's Rights Defined", "Supplemental Documents (Referenced in text)",
+            "Suspension", "Ultimate Decision Maker", "Written Feedback",
+            "Written Notice", "Written Plan of Assistance"
+        ];
+
+        const removedCodes = [
+            "Accessibility/Disability", "CACREP", "Counselor Identity", "Coursework",
+            "Defining Violation Severity", "Discrimination & Dismissal", "Dispositions Agreement Form", 
+            "Dispositions Linked to Coursework", "Diversity Considerations & Remediation", 
+            "Diversity Deficits & Remediation", "Due Process", "Field Instruction",
+            "Increased Supervision", "Levels of Formality", "Outsourced to college policies - dismissal",
+            "Performance Review Rationale", "Professional Competency Deficits",
+            "Professional Competency Evaluation", "Program Evaluation",
+            "Reapplication Following Dismissal", "Resources Provided (For Remediation)",
+            "Settings of Evaluation", "Strengths-Based Remediation",
+            "Student Dismissal Form (Supplemental Document)",
+            "Student Evaluation of Faculty/Field Instructors", "Student Grievance", 
+            "Student Performance/Dispositional Alert to Faculty", "Supports"
+        ];
+
+        const handbooks = Array.from({length: 44}, (_, i) => i + 1);
+
+        // Heatmap data
+        const heatmapData = {
+            series: codes.map(code => ({
+                name: code,
+                data: Array(44).fill(0).map((_, i) => Math.floor(Math.random() * 10)) // Replace with actual data
+            })),
+            chart: {
+                height: '100%',
+                type: 'heatmap',
+                toolbar: { show: true }
+            },
+            dataLabels: { enabled: false },
+            colors: ["#e0e7ff", "#c7d2fe", "#a5b4fc", "#818cf8", "#6366f1", "#4f46e5", "#4338ca"],
+            xaxis: { 
+                categories: handbooks,
+                labels: {
+                    rotate: -45,
+                    style: {
+                        fontSize: '12px'
+                    }
+                }
+            },
+            yaxis: {
+                labels: {
+                    style: {
+                        fontSize: '10px'
+                    }
+                }
+            },
+            plotOptions: {
+                heatmap: {
+                    distributed: true
+                }
+            },
+            title: { 
+                text: 'Code Frequency Across Handbooks',
+                align: 'left',
+                style: {
+                    fontSize: '16px'
+                }
+            },
+            annotations: {
+                position: 'bottom',
+                y: -20,
+                text: 'The following codes were removed due to less than 5 quotes across all handbooks:',
+                style: {
+                    fontSize: '12px',
+                    color: '#6b7280'
+                }
+            }
+        };
+
+        // Top Frequency Codes Visualization
+        const topCodesData = {
+            series: [{
+                name: 'Frequency',
+                data: [
+                    { x: 'Remediation Plan', y: 108 },
+                    { x: 'Performance Reviews', y: 84 },
+                    { x: 'Dispositional Evaluation', y: 72 },
+                    { x: 'Student GK Informed Consent', y: 66 },
+                    { x: 'Formalized Procedures', y: 64 },
+                    { x: 'Dismissal Causes', y: 63 },
+                    { x: 'Remediation Meeting', y: 52 },
+                    { x: 'Dispositions', y: 51 },
+                    { x: 'Dismissal', y: 49 },
+                    { x: 'Faculty Gatekeeping Identity', y: 45 }
+                ]
+            }],
+            chart: {
+                type: 'bar',
+                height: '100%',
+                toolbar: { show: true }
+            },
+            plotOptions: {
+                bar: {
+                    borderRadius: 4,
+                    horizontal: true,
+                    distributed: true,
+                    dataLabels: {
+                        position: 'bottom'
+                    }
+                }
+            },
+            colors: [
+                '#6366f1', '#818cf8', '#a5b4fc', '#c7d2fe', '#e0e7ff',
+                '#4f46e5', '#4338ca', '#3730a3', '#312e81', '#1e1b4b'
+            ],
+            dataLabels: {
+                enabled: true,
+                formatter: function(val) {
+                    return val;
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: ['#1e293b']
+                },
+                offsetX: 10
+            },
+            xaxis: {
+                categories: [
+                    'Remediation Plan', 'Performance Reviews', 'Dispositional Evaluation',
+                    'Student GK Informed Consent', 'Formalized Procedures', 'Dismissal Causes',
+                    'Remediation Meeting', 'Dispositions', 'Dismissal', 'Faculty Gatekeeping Identity'
+                ]
+            },
+            tooltip: {
+                y: {
+                    formatter: function(value) {
+                        return value + " total occurrences";
+                    }
+                }
+            }
+        };
+
+        // Comparison Chart
+        const comparisonChart = new Chart(
+            document.getElementById('comparisonChart'),
+            {
+                type: 'line',
+                data: {
+                    labels: handbooks,
+                    datasets: [
+                        {
+                            label: 'Remediation Plan',
+                            data: [7, 2, 3, 1, 3, 2, 1, 2, 0, 2, 3, 2, 4, 0, 3, 3, 3, 2, 1, 2, 1, 1, 4, 6, 4, 0, 3, 0, 1, 1, 0, 3, 5, 4, 5, 5, 3, 3, 2, 3, 3, 2, 1, 2],
+                            borderColor: '#6366f1',
+                            backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        },
+                        {
+                            label: 'Dismissal Causes',
+                            data: [3, 1, 0, 1, 2, 1, 1, 1, 0, 2, 1, 1, 5, 0, 3, 0, 0, 1, 2, 0, 1, 1, 4, 3, 2, 0, 0, 0, 4, 1, 1, 0, 2, 3, 5, 0, 2, 2, 1, 1, 0, 1, 3, 1],
+                            borderColor: '#a78bfa',
+                            backgroundColor: 'rgba(167, 139, 250, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        },
+                        {
+                            label: 'Performance Reviews',
+                            data: [0, 1, 7, 0, 2, 3, 3, 0, 0, 3, 4, 5, 4, 0, 6, 6, 0, 3, 0, 2, 0, 1, 1, 3, 3, 2, 0, 2, 1, 2, 1, 1, 2, 1, 0, 4, 2, 5, 0, 0, 0, 0, 1, 3],
+                            borderColor: '#4f46e5',
+                            backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        },
+                        {
+                            label: 'Dispositional Evaluation',
+                            data: [1, 1, 2, 1, 2, 2, 3, 0, 0, 1, 1, 5, 7, 0, 1, 5, 0, 1, 2, 0, 0, 2, 0, 1, 2, 1, 0, 3, 0, 1, 2, 2, 2, 1, 4, 1, 4, 1, 1, 1, 2, 3, 1, 2],
+                            borderColor: '#8b5cf6',
+                            backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        },
+                        {
+                            label: 'Student GK Informed Consent',
+                            data: [1, 0, 4, 0, 1, 0, 1, 0, 0, 1, 4, 2, 3, 1, 0, 3, 3, 2, 2, 0, 1, 3, 1, 1, 2, 3, 0, 2, 0, 0, 1, 3, 2, 0, 0, 4, 1, 4, 3, 0, 2, 1, 2, 2],
+                            borderColor: '#7c3aed',
+                            backgroundColor: 'rgba(124, 58, 237, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: false,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index' },
+                    plugins: {
+                        title: { display: false },
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                boxWidth: 12
+                            }
+                        }
+                    },
+                    scales: {
+                        y: { 
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Frequency'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Handbook Number'
+                            }
+                        }
+                    }
+                }
+            }
+        );
+
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', () => {
+            const heatmap = new ApexCharts(document.querySelector("#heatmap"), heatmapData);
+            heatmap.render();
+            
+            const topCodesChart = new ApexCharts(document.querySelector("#topCodesChart"), topCodesData);
+            topCodesChart.render();
+            
+            // Add removed codes list below x-axis
+            const heatmapContainer = document.querySelector("#heatmap");
+            const removedCodesDiv = document.createElement('div');
+            removedCodesDiv.className = 'mt-4 text-sm text-gray-500';
+            removedCodesDiv.innerHTML = `
+                <p class="font-medium">Removed codes with less than 5 occurrences:</p>
+                <p>${removedCodes.join(', ')}</p>
+            `;
+            heatmapContainer.parentNode.insertBefore(removedCodesDiv, heatmapContainer.nextSibling);
+        });
+    </script>
+</body>
+</html>
